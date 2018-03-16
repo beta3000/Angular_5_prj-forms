@@ -28,6 +28,10 @@ export class RecipeEditComponent implements OnInit {
       );
   }
 
+  onSubmit() {
+    console.log(this.recipeForm);
+  }
+
   private initForm() {
     const recipe = this.recipeService.getRecipe(this.id);
     let recipeName = '';
@@ -44,7 +48,6 @@ export class RecipeEditComponent implements OnInit {
       'imagePath': new FormControl(recipeImagePath),
       'description': new FormControl(recipeDescription)
     });
-
   }
 
 }
